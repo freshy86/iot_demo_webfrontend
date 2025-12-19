@@ -15,7 +15,7 @@ export const msalConfig = {
     auth: {
         clientId: '4e9461a7-976f-4662-afa4-eed703674327', // This is the ONLY mandatory field that you need to supply.
         authority: 'https://svfriotdemo.ciamlogin.com/', // Replace the placeholder with your tenant subdomain 
-        redirectUri: 'http://localhost:3000/redirect', // Points to window.location.origin. You must register this URI on Microsoft Entra admin center/App Registration.
+        redirectUri: 'https://svfr-iot-fullstack-webfrontend-dwfrgpcbhgbmfugf.westeurope-01.azurewebsites.net/redirect', // Points to window.location.origin. You must register this URI on Microsoft Entra admin center/App Registration.
         postLogoutRedirectUri: '/', // Indicates the page to navigate after logout.
         navigateToLoginRequestUrl: false, // If "true", will navigate back to the original request location before processing the auth code response.
     },
