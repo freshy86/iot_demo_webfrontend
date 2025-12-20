@@ -17,6 +17,24 @@ export type GraphData = {
     officeLocation: string
 };
 
+export const ProfileData = (props: any) => {
+    const data = props.graphData || [];
+
+    if (!Array.isArray(data)) {
+        return <div id="profile-div">No graph data available</div>;
+    }
+
+    return (
+        <div id="profile-div">
+            <ul>
+                {data.map((item: any, idx: number) => (
+                    <li key={idx}>Temperature: {item.temperatureC}</li>
+                ))}
+            </ul>
+        </div>
+    );
+};
+/*
 export const ProfileData: React.FC<{graphData: GraphData}> = ({graphData}) => {
     return (
         <List className="profileData">
@@ -82,4 +100,4 @@ const LocationListItem: React.FC<{location: string}> = ({location}) => (
         </ListItemAvatar>
         <ListItemText primary="Location" secondary={location}/>
     </ListItem>
-);
+);*/
